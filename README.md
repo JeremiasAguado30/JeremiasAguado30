@@ -1,12 +1,30 @@
-- 👋 Hi, I’m @JeremiasAguado30
-- 👀 I’m interested in Cibersecurity 
-- 🌱 I’m currently learning Cibersecurity
-- 💞️ I’m looking to collaborate on cibersecurity
-- 📫 How to reach me ...
-- 😄 Pronouns: Pela
-- ⚡ Fun fact: 
+ 👋 Hola, soy @JeremiasAguado30
 
-<!---
-JeremiasAguado30/JeremiasAguado30 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+Soy entusiasta de la ciberseguridad y estoy construyendo un perfil orientado al **análisis de malware** y la **respuesta a incidentes**.
+
+## 🔬 Enfoque profesional
+- 🧠 **Intereses:** reverse engineering, threat intelligence, DFIR y análisis estático/dinámico.
+- 🌱 **Actualmente aprendiendo:** Windows internals, Linux malware basics, YARA y reglas Sigma.
+- 🤝 **Abierto a colaborar en:** laboratorios CTF, writeups técnicos y proyectos de detección.
+
+## 🧪 Laboratorio de análisis de malware (uso ético)
+> Todo el trabajo se realiza en entornos aislados (VMs), sin ejecutar muestras fuera de laboratorio y con fines educativos/defensivos.
+
+### Flujo de análisis que estoy documentando
+1. **Triage inicial:** hash (SHA256), tipo de archivo, strings relevantes, metadatos.
+2. **Análisis estático:** PE headers, imports, empaquetado, IOCs preliminares.
+3. **Análisis dinámico controlado:** comportamiento, procesos, red, persistencia.
+4. **Detección:** creación de reglas YARA/Sigma e hipótesis MITRE ATT&CK.
+5. **Reporte técnico:** hallazgos, evidencia y recomendaciones defensivas.
+
+## 📂 Contenido que estaré publicando
+- Writeups de análisis de muestras (sanitizados).
+- Reglas YARA comentadas.
+- Cheatsheets de reversing y hunting.
+- Notas de hardening y monitoreo.
+
+## 📫 Contacto
+- Puedes abrir un issue o conectar conmigo por GitHub.
+
+## ⚡ Meta 2026
+Publicar análisis consistentes, mejorar la calidad técnica de los reportes y aportar valor real a la comunidad blue team.
