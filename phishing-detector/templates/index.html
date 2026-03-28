@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pescando | Detector de Phishing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Pescando</h1>
+        <p class="subtitle">Detector heurístico de URLs de phishing</p>
+      </header>
+
+      <section class="card">
+        <form method="POST" novalidate>
+          <label for="url">Ingresa una URL a analizar</label>
+          <div class="input-group">
+            <input
+              id="url"
+              name="url"
+              type="text"
+              placeholder="https://ejemplo.com/login"
+              value="{{ url_input }}"
+              required
+            />
+            <button type="submit">Analizar</button>
+          </div>
+        </form>
+
+        {% if error %}
+        <div class="alert error">{{ error }}</div>
+        {% endif %}
+
+        {% if result %}
+        <div class="result">
+          <h2>Resultado del análisis</h2>
+          <p><strong>URL normalizada:</strong> {{ result.url }}</p>
+          <p>
+            <strong>Clasificación:</strong>
+            <span class="badge {{ result.classification|lower|replace(' ', '-') }}">
+              {{ result.classification }}
+            </span>
+          </p>
+          <p><strong>Score de riesgo:</strong> {{ result.score }}/100</p>
+
+          <h3>Razones detectadas</h3>
+          <ul>
+            {% for reason in result.reasons %}
+            <li>{{ reason }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>
